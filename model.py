@@ -13,7 +13,7 @@ def dyslexia(pred_list):
     return result
 
 def dyscalculia(pred_list):
-    loaded_model = pickle.load(open(filename1, 'rb'))
+    loaded_model = pickle.load(open(filename2, 'rb'))
     #result = loaded_model.score(X_test, y_test)
     result = loaded_model.predict(pred_list)
     #print(result)

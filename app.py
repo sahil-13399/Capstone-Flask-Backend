@@ -53,10 +53,11 @@ def upload_file():
     l3 = [compute1,compute2,compute3,compute4]
     l4 = [time1,time2,time3,time4]
     l5 = [geo1,geo2,geo3,geo4]
-    #score1,score2,score3,score4,score5 = validate_answers(l1,l2,l3,l4,l5)
-    #result = dyscalculia([[gender,age,score1,score2,score3,score4,score5]])
-    #return jsonify({'Status':int(result[0])})
-    return jsonify({'Status':geo1})
+    score1,score2,score3,score4,score5 = validate_answers(l1,l2,l3,l4,l5)
+    print(str(score1)+" "+str(score2)+" "+str(score3)+" "+str(score4)+" "+str(score5))
+    result = dyscalculia([[gender,age,score1,score2,score3,score4,score5]])
+    return jsonify({'Status':int(result[0])})
+    #return jsonify({'Status':geo1})
 
 @app.route('/api/dyslexia/upload',methods=['POST'])
 def test_func():
